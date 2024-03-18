@@ -1,0 +1,236 @@
+.contacts {
+  padding-top: 17px;
+  padding-bottom: 69px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    row-gap: 0;
+  }
+
+  &__title {
+    grid-column: 1/-1;
+    margin-bottom: 18px;
+    color: var(--dark-color);
+    font-family: 'TTFirsNeue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  &__left {
+    position: relative;
+    max-height: 465px;
+    min-height: 465px;
+    max-width: 100%;
+    grid-column: 1/9;
+    // padding-top: 50px;
+  }
+
+  &__right {
+    max-width: 100%;
+    grid-column: 9/13;
+  }
+
+  /* карта */
+  &__map {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    object-fit: cover;
+    padding-top: 5px;
+  }
+
+  &__caption {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'TTFirsNeue';
+    color: var(--light-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  &__input {
+    background-color: var(--contacts-input);
+    margin-bottom: 20px;
+    border: none;
+  }
+
+
+  &__input::placeholder {
+    padding-top: 0px;
+  }
+
+  &__content {
+    // margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--form-color);
+  }
+
+  &__form {
+    display: block;
+    padding-top: 13px;
+
+  }
+
+  &__desc {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 51.7647%;
+    opacity: 1;
+    visibility: hidden;
+    background: rgba(32, 32, 32, 0.85);
+    z-index: 10000;
+    padding: 175px 50px 150px 60px;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  &__desc_active {
+    animation: showElem 1s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: column;
+    // flex-wrap: wrap;
+  }
+
+  &__desc_dizactive {
+    animation: showElem2 1s ease-in-out;
+    opacity: 0;
+  }
+
+
+  &__address {
+    // display: block;
+    margin-bottom: 2px;
+    font-style: normal;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--gray-color);
+  }
+
+
+
+  &__right .contacts__caption {
+    color: var(--dark-color);
+  }
+
+
+
+
+
+  &__tel, &__tel-bottom {
+    display: flex;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-family: 'TTFirsNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--accent-color);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+
+}
+
+
+
+// карта
+/* скрываем отстаток элементов и карта пустая +JS*/
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+/* делаем карту черно-белой */
+[class*="ground-pane"] {
+  filter: grayscale(100);
+}
+
+
+
+
+
+
+
+.form__input-box {
+  position: relative;
+}
+
+.input-text {
+  resize: none;
+}
+
+
+
+
+@keyframes showElem {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes showElem2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.contacts__title {
+  grid-column: 1/-1;
+  margin-bottom: 18px;
+  color: var(--dark-color);
+  font-family: TTFirsNeue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px
+}
+
+.contacts__left {
+  position: relative;
+  max-height: 465px;
+  min-height: 465px;
+  max-width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9
+}
+
+.contacts__right {
+  max-width: 100%;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9/13
+}

@@ -1,0 +1,170 @@
+// меню
+.nav__link {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+  z-index: 2;
+}
+
+.nav__link::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  transition: all 1s ease-in-out;
+  z-index: -1;
+  outline: none;
+}
+
+.nav__link:hover {
+  color: var(--accent-color);
+}
+
+.nav__link:focus-visible::before {
+  background-color: var(--active-color);
+  color: var(--light-color);
+}
+
+.nav__link:active {
+  color: var(--active-color);
+  background-color: transparent;
+
+}
+
+// социальные сети
+
+.footer__icon {
+  outline: none;
+}
+
+
+.footer__icon svg path {
+  fill: currentColor;
+  transition: all 1s ease-in-out;
+}
+
+.footer__icon svg path {
+  color: var(--gray-color);
+}
+
+.footer__icon:hover svg path {
+  color: var(--accent-color);
+}
+
+.footer__icon:focus-visible svg path {
+  color: var(--active-color);
+}
+
+.footer__icon:active svg path {
+  color: var(--active2-color);
+}
+
+// кнопки
+.hero__btn,
+.form__btn {
+  position: relative;
+  transition: all 1s ease-in-out;
+  outline: none;
+}
+
+.hero__btn::before,
+.form__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border: 3px solid var(--active-color);
+  outline: none;
+}
+
+.hero__btn:hover,
+.form__btn:hover {
+  background-color: var(--active-color);
+}
+
+.hero__btn:focus-visible::before,
+.form__btn:focus-visible::before {
+  opacity: 1;
+}
+
+.hero__btn:active,
+.form__btn:active {
+  background-color: var(--active2-color);
+}
+
+.header__logo:hover,
+.footer__image:hover{
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.5;
+}
+
+
+
+
+
+.lection__btn, .test__btn {
+  position: relative;
+  transition: all 0.6s ease-in-out;
+  outline: none;
+}
+
+.lection__btn:hover, .test__btn:hover  {
+  background-color: var(--accent-color);
+}
+
+.lection__btn:focus, .test__btn:focus {
+  background-color: var(--active-color);
+}
+
+.lection__btn:active, .test__btn:active  {
+  background-color: var(--active2-color);
+  border: 3px solid var(--active2-color);
+}
+
+// кнопка поиска
+
+.header__form:hover .header__inp,
+.header__inp:focus {
+  border-bottom-color: var(--accent-color);
+}
+
+.header__form:active .header__inp,
+.header__inp:active {
+  border-bottom-color: var(--active2-color);
+}
+
+.header__form:active .header__inp::placeholder {
+  color: transparent;
+}
+// форма в блоке о нас
+
+.form__input {
+  cursor: pointer;
+  position: relative;
+  transition: all 1s ease-in-out;
+  outline: 3px solid transparent;
+}
+
+.form__input::placeholder {
+  transition: all 1s ease-in-out;
+}
+
+.form__input:hover::placeholder {
+  color: var(--accent-color);
+}
+
+.form__input:focus-visible {
+  outline: 3px solid var(--accent-color);
+}
+
+.form__input:active {
+  outline: 3px solid transparent;
+
+}

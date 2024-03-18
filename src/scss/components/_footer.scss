@@ -1,0 +1,83 @@
+.footer {
+  background-color: var(--dark-color);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    padding-top: 22px;
+    padding-bottom: 13px;
+  }
+
+  &__left {
+    max-width: 100%;
+    grid-column: 1/4;
+    justify-self: center;
+    justify-self: flex-start;
+    @include flex-all-center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__image {
+    margin-bottom: 5px;
+  }
+
+  &__quote {
+    max-width: 100%;
+    grid-column: 4/10;
+    justify-self: flex-start;
+    @include flex-all-center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 110px;
+  }
+
+  &__right {
+    max-width: 100%;
+    grid-column: 10/13;
+    justify-self: flex-end;
+    @include flex-all-center;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__company {
+    font-family: 'TTFirsNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--contacts-input);
+    // padding-top: 10px;
+  }
+
+  &__quote,
+  &__more {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--gray-color);
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+  }
+
+  &__icon:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__mobile{
+    display: none;
+  }
+
+}

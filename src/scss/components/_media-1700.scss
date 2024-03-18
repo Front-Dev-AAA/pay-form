@@ -1,0 +1,37 @@
+@media (max-width: 1850px) {
+  .nav__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  // .header__tablet {
+
+  // }
+
+
+  .header__logo,
+  .footer__image {
+    max-width: 50px;
+    max-height: 50px;
+    opacity: 1;
+    transition: opacity 0.9s ease-in-out;
+  }
+//   .header__tablet {
+//     left: calc(700px + 57 * (100vw - 1920px) / 124);
+// }
+
+
+.about__right {
+ padding-top: 400px;
+}
+
+}
+
+@media (max-width:1500px) {
+  :root {
+    --content-width: 962px;
+    --container-offset: 31px;
+  }
+
+}

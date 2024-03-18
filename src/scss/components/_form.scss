@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+
+  &__label {
+    position: relative;
+    // display: flex;
+    // flex-direction: column-reverse;
+    margin-right: 30px;
+    flex-grow: 1;
+  }
+
+  // перебиваем цвет ошибки
+  .just-validate-error-label {
+    position: absolute;
+    color: var(--form-error-color) !important;
+    top: 0;
+    left: 22px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    background-color: var(--accent-color);
+    text-align: center;
+    padding: 16px 22px 15px;
+    align-self: flex-start;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+  }
+
+  &__input,
+  &__input::placeholder {
+    color: var(--gray-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 15px 11px 16px;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: var(--form-about-color);
+    outline: none;
+  }
+
+
+}

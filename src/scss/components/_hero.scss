@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  z-index: 0;
+
+  &__slide {
+    background-repeat: no-repeat;
+  }
+
+  &__slide_1,
+  &__slide_2,
+  &__slide_3,
+  &__slide_4,
+  &__slide_5,
+  &__slide_6 {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__slide_1::before,
+  &__slide_2::before,
+  &__slide_3::before,
+  &__slide_4::before,
+  &__slide_5::before,
+  &__slide_6::before {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__slide_1::before,
+  &__slide_2::before,
+  &__slide_3::before,
+  &__slide_4::before,
+  &__slide_5::before,
+  &__slide_6::before {
+    position: absolute;
+    animation: bg-animation 20s linear infinite;
+    content: '';
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+  }
+
+  &__slide_1::before {
+    background-image: url('../img/hero-bg-1.jpeg');
+  }
+
+  &__slide_2::before {
+    background-image: url('../img/hero-bg-2.jpg');
+  }
+
+  &__slide_3::before {
+    background-image: url('../img/hero-bg-3.jpg');
+  }
+
+  &__slide_4::before {
+    background-image: url('../img/hero-bg-4.jpg');
+  }
+
+  &__slide_5::before {
+    background-image: url('../img/hero-bg-5.jpg');
+  }
+
+  &__slide_6::before {
+    background-image: url('../img/hero-bg-6.jpg');
+  }
+
+  &__content {
+    padding-top: 60px;
+    width: 50%;
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 83px;
+    color: var(--dark-color);
+    // padding-top: 170px;
+  }
+
+  &__mainheading {
+    color: var(--active-color);
+  }
+
+
+  &__text {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--active-color);
+    padding-bottom: 5px;
+  }
+
+  &__swiper {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    z-index: -1;
+  }
+
+}
+
+
+
+
+
+@keyframes bg-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}

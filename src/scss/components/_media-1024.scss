@@ -1,0 +1,178 @@
+@media (max-width: 1100px) {
+
+  :root {
+    --content-width: 962x;
+    --container-offset: 31px;
+  }
+
+
+  .header__container {
+    padding-top: 26px;
+  }
+
+  // .header__tel-bottom {
+  //   display: inline;
+  // }
+
+  .lection__variants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+
+  .nav {
+    padding-left: 47px;
+  }
+
+  .nav__item:not(:last-child) {
+    margin-right: 33px;
+  }
+
+  .nav__click {
+    padding-left: 0;
+  }
+
+
+
+  // о нас
+  .about {
+    padding-bottom: 26px;
+
+    &__camera {
+      // за счет падинга увеличили высоту картинки
+      padding-top: 332px;
+    }
+
+
+    &__right::before {
+      width: 100%;
+      height: 100%;
+      // background: url(../img/about__camera-1024.webp) center/cover no-repeat;
+    }
+
+    &__camera::after {
+      width: 100%;
+      height: 100%;
+      // background: url(../img/about__camera-1024.webp) center/cover no-repeat;
+    }
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__input {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 78.5%;
+    }
+
+    &__caption {
+      margin-bottom: 17px;
+    }
+
+    &__right {
+      padding-top: 388px;
+    }
+
+
+  }
+
+  .question-number, .options, .button, .question, .answers-tracker, .about__form, .test__parag{
+    grid-column: 1/13;
+  }
+
+
+
+
+  // контакты
+
+  .contacts {
+    padding-bottom: 69px;
+
+    &__container {
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 20px;
+    }
+
+    &__left {
+      grid-column: 1/6;
+
+    }
+
+    &__right {
+      grid-column: 6/9;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__caption {
+      margin-bottom: 6px;
+    }
+
+
+    &__desc {
+      right: 0;
+      height: auto;
+      top: 310px;
+      padding-top: 25px;
+      padding-right: calc(200px + 57 * ((100vw - 900px) / 124));
+      padding-bottom: 21px;
+      padding-left: 30px;
+    }
+
+    &__left {
+      max-height: 465px;
+      min-height: 465px;
+    }
+
+
+    &__address {
+      display: inline;
+    }
+
+    &__tel,
+    &__tel-bottom {
+      display: inline;
+    }
+
+
+    &__desc_active {
+      display: inline-block !important;
+    }
+
+  }
+
+
+
+
+  // футер
+  .footer {
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 13px;
+      gap: 0px;
+    }
+
+    &__quote {
+      padding-top: 3px;
+    }
+
+    &__left {
+      grid-column: 1/5;
+    }
+
+    &__quote {
+      padding-left: 0;
+      grid-column: 5/10;
+      justify-self: flex-end;
+    }
+  }
+
+
+
+
+
+}
